@@ -19,5 +19,8 @@
 </form>
 <div *ngIf="photos">
   <app-photos-list [childPhotos]="photos"></app-photos-list>
+</div>
+<div *ngIf="photos===null">
+  <h3>There were no photos taken on {{roverDate.value}} by {{roverCamera.value}} camera.</h3>
 
 </div>
