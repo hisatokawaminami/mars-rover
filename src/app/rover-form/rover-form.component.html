@@ -16,6 +16,7 @@
     </select>
   </div>
   <button (click)="getRoverImages(roverDate.value, roverCamera.value)">Get Photos</button>
+  <button (click)="saveRoverImages(roverDate.value, roverCamera.value)">Save All Images</button>
 </form>
 <div *ngIf="photos">
   <app-photos-list [childPhotos]="photos"></app-photos-list>
