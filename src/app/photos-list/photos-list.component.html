@@ -2,5 +2,5 @@
 <h2> From {{childPhotos.photos[0].earth_date}} by the {{childPhotos.photos[0].camera.name}}</h2>
 <div *ngFor="let photo of childPhotos.photos;" class="photo">
   <img src={{photo.img_src}} alt="">
-
+<button (click)="saveImage(photo.img_src, childPhotos.photo[0].camera.name, childPhotos.photo[0].earth_date)">Save Photo</button>
 </div>

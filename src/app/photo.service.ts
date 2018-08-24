@@ -12,4 +12,14 @@ export class PhotoService {
   addPhoto(newPhoto: Photo) {
     this.photos.push(newPhoto);
   }
+  getPhotos() {
+    return this.photos;
+  }
+  deletePhoto(selectedPhoto){
+    let foundPhoto = this.getPhotoById(selectedPhoto.$key);
+    foundPhoto.remove();
+  }
+  getPhotoById(photoId: string){
+    return this.af.object('photos/' + photoId);
+  }
 }
